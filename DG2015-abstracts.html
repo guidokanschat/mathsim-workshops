@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advances in discontinuous Galerkin Methods and related topics (Abstracts)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--<meta name="author" content="$Author: fhirsch $">-->
+    <!--<meta name="revised" content="$Date: 2012-10-31 10:53:37 +0100 (Wed, 31 Oct 2012) $">-->
+    <link rel="stylesheet" type="text/css" href="../MathSim.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://www.uni-heidelberg.de/css/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://www.uni-heidelberg.de/css/printstyle.css" media="print"/>
+    <link rel="stylesheet" type="text/css" href="http://www.uni-heidelberg.de/css/iwr-typo3.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://www.uni-heidelberg.de/css/iwr-additional.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://www.uni-heidelberg.de/typo3temp/stylesheet_5d370599a3.css?1302597532" media="all"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/css/favicon.png"/>
+  </head>
+<body>
+  <div id="topBarInstitute"></div>
+
+  <!--#include virtual="/navi.html" -->
+  
+  <div id="middleColumn2spalter">
+      
+    <h1>Advances in discontinuous Galerkin Methods and related topics</h1> 
+      
+      <h2>Workshop</h2>
+      <h3>Heidelberg, December 14 - 16, 2015</h3>
+     
+      <div id="greyBar"></div>
+      
+      <h2>Abstracts</h2>
+      
+      <h3>Bernardo Cockburn: The evolution of the HDG methods</h3>
+
+    <p>
+      After motivating the introduction of the so-called hybridizable
+      discontinuous Galerkin (HDG) methods, we give an overview of
+      their development since their inception. This will be done in
+      the framework of steady-state diffusion problems. Extensions to
+      other problems will be also reviewed.
+    </p>
+
+    <h3>Christoph Schwab: hp-, dG-, and QTT FEM</h3>
+
+    <p>
+      We present an overview on analysis and implementation 
+      of high order, in particular hp, Finite Element Methods (FEM), 
+      with particular attention to
+      <br/>
+      a) singular solutions, 
+      <br/>
+      b) analytic regularity theory, and
+      <br/>
+      c) exponential convergence rate bounds of DG and CG versions of hp-FEM in three dimensions. 
+      <br/>
+      d)  Recent results and ongoing research on exponential convergence of 
+quantized tensor-train (QTT) 
+<br>
+formatted first order FEM based on a) , b) and c) will also be given. 
+      <br/>
+      
+    </p>
+    
+    <p>
+      a,b,c) are joint work with Dominik Schoetzau (Vancouver) and Thomas Wihler (Bern),
+d) is joint work with Vladimir Kazeev (Geneva)
+    </p>
+    
+
+    <h3>Blanca Ayuso de Dios: Auxiliary Space Preconditioners for discontinuous Galerkin approximation of H(curl)-elliptic problems with discontinuous coefficients.</h3>
+
+    <p>
+      We introduce a family of preconditioners for linear systems of
+      equations arising from a symmetric Interior Penalty
+      Discontinuous Galerkin (IP-DG) discretization of
+      H<sup>curl</sup>(Ω)-elliptic boundary value problems.  The
+      design and analysis of the preconditioners relies on the
+      auxiliary space method (ASM) employing an auxiliary space of
+      H<sup>curl</sup>(Ω)-conforming finite element functions together
+      with a relaxation technique. We analyze the asymptotic
+      convergence of the proposed preconditioners addressing
+      specifically the robustness of the solvers with respect to jumps
+      in the coefficients of the second and zeroth order parts of the
+      operator, respectively.  Extensive numerical experiments are
+      included to verify the theory and asses the performance of the
+      preconditioners.
+    </p>
+    <p>
+      Joint work with RalfHiptmair and Cecilia Pagliantini from ETH, Zürich.
+    </p>
+
+
+    <h3>Peter Bastian: High-performance Computing for Flows in Porous Media</h3>
+    <p>
+      Simulation of flow and transport processes in porous media
+      provides a formidable challenge and application field for
+      high-performance computing.  Relevant continuum-scale models
+      include partial differential equations of elliptic, parabolic
+      and hyperbolic type which are coupled through highly nonlinear
+      coefficient functions. The multi-scale character and
+      uncertainties in the parameters constitute an additional level
+      of complexity but provide also opportunities for
+      high-performance computing.
+    </p>
+    <p>
+      This talk will focus on the efficient solution of porous media
+      flow problems with discontinuous Galerkin methods.  For the fast
+      solution of the linear systems arising in the elliptic flow
+      equation a hybrid preconditioner based on subspace correction in
+      the conforming finite element subspace is employed. The
+      transport equation is solved with explicit methods as part of an
+      operator splitting scheme for the coupled system. The
+      performance of the implementation based on the sum factorization
+      approach is assessed and computational results for unstable
+      flows in porous media are presented.
+    </p>
+
+    <h3>Jay Gopalakrishnan: Six formulations of the Maxwell cavity problem and their DPG discretizations</h3>
+    <p>
+      Depending on how each equation in the Maxwell system is treated
+      (weakly or strongly), one gets a proliferation of variational
+      formulations for a single electric cavity boundary value
+      problem. We will show that stability of one variational
+      formulation implies the stability of all others. Then we discuss
+      the stability of their DPG discretizations.
+    </p>
+
+    <h3>Chen Greif: On Nonsingular Saddle-Point Systems with a Maximally Rank-Deficient Leading Block</h3>
+    <p>
+      My collaboration with Dominik started over ten years ago, when
+      we considered preonditioners for the saddle-point formulation of
+      the time-harmonic Maxwell equations. The mathematical problem is
+      fascinating, and the discrete Helmholtz equation does magic that
+      allowed us to develop an effective block preconditioner, and
+      some matrix analysis to go along with it. It's been fun to work
+      together ever since. Recently, my student Ron Estrin and I have
+      taken a broader look at the algebraic properties of the class of
+      nonsingular saddle-point matrices whose leading block is
+      maximally rank deficient, and have found that the inverse in
+      this case has unique mathematical properties. This allows for
+      developing a class of indefinite block preconditioners that rely
+      on approximating the null space of the leading block. The
+      preconditioned matrix is a product of two indefinite matrices,
+      but under certain conditions the conjugate gradient method can
+      be applied and is rapidly convergent. Spectral properties of the
+      preconditioners are observed and validated by numerical
+      experiments.
+    </p>
+
+    <h3>Marcus Grote: DG Methods and Multi-level Local Time-Stepping For Wave Propagation</h3>
+    <p>
+      The accurate and reliable simulation of wave phenomena is of
+      fundamental importance in a wide range of engineering and
+      medical applications such as seismic tomography, wireless
+      communication, ultrasound imaging, and non-invasive testing. To
+      address the wide range of difficulties involved, we consider
+      symmetric interior penalty discontinuous Galerkin (IP-DG)
+      methods for the wave equation (Grote, Schneebeli, Schötzau,
+      2006, 2009), which easily handle elements of various types and
+      shapes, irregular non-matching grids, and even locally varying
+      polynomial order. Moreover, in contrast to standard (conforming)
+      finite element methods, IP-DG methods yield an essentially
+      diagonal mass matrix; hence, when coupled with explicit time
+      integration, the overall numerical schemes remain truly explicit
+      in time.
+    </p>
+    <p>
+      Local mesh refinement severely impedes the efficiency of
+      explicit time-stepping methods for numerical wave
+      propagation. Local time-stepping (LTS) methods overcome the
+      bottleneck due to a few small elements by allowing smaller
+      time-steps precisely where those elements are located. Yet when
+      the region of local mesh refinement itself contains a sub-region
+      of even smaller elements, any local time-step again will be
+      overly restricted. To remedy the repeated bottleneck caused by
+      hierarchical mesh refinement, multilevel local time-stepping
+      methods are proposed, which permit the use of the appropriate
+      time-step at every level of mesh refinement. Based on the LTS
+      methods from Diaz and Grote (2009), these multi-level LTS
+      methods are explicit, yield arbitrarily high accuracy and
+      conserve the energy.
+    </p>
+    <h3>Ralf Hiptmair: Discretizing the Advection of Differential Forms</h3>
+    <p>
+      Motivated by boundary value problems from magneto-hydrodynamics
+      we study advection problems for differential forms. They are
+      stated in terms of the Lie derivative in a given velocity
+      field. They also represent a family of transport problems, of
+      which scalar advection is one member.
+    </p>
+    <p>
+      Inspired by successful schemes devised for the scalar case we
+      pursue a stabilized Galerkin approach in the spirit of
+      discontinuous Galerkin methods with upwind numerical flux. We
+      note that even if the solution is approximated by means of
+      discrete differential forms, jump terms across interelement
+      faces have to be retained for non-scalar problems, and they hold
+      the key to stability. Rigorous a priori convergence estimate are
+      provided for the stationary problem and for Lipschitz continuous
+      velocity fields.
+    </p>
+    <p>
+      For discontinuous velocities, existence of solutions of is open
+      beyond the scalar case. However, an extension of a stabilized
+      Galerkin scheme performs well in numerical experiments also in
+      this case.
+    </p>
+    <h3>Paul Houston: Adaptive Discontinuous Galerkin Methods on Polytopic Meshes</h3>
+    <p>
+      In this talk we consider the hp-version interior penalty
+      discontinuous Galerkin method (DGFEM) for the discretization of
+      second order elliptic partial differential equations on general
+      computational meshes consisting of polygonal/polyhedral
+      elements. By admitting such general meshes, this class of
+      methods allows for the approximation of problems posed on com-
+      putational domains which may contain a huge number of local
+      geometrical features, or micro-structures. While standard
+      numerical methods can be de- vised for such problems, the
+      computational effort may be extremely high, as the minimal
+      number of elements needed to represent the underlying domain can
+      be very large. In contrast, the minimal dimension of the
+      underlying (composite) finite element space based on general
+      polytopic meshes is inde- pendent of the number of geometric
+      features. Here, we consider both the a priori and a posteriori
+      error analysis of this class of methods, as well as their
+      application within Schwarz-type domain decomposition
+      preconditioners.
+    </p>
+    <p>
+      This is joint work with Paola Antonietti (MOX, Milan), Andrea
+      Cangian (Leicester), Joe Collis (Nottingham), Zhaonan Dong
+      (Leicester), Manolis Georgoulis (Leicester) and Stefano Giani
+      (Durham).
+    </p>
+
+    <h3>Guido Kanschat: On the finite element cochain complex for divergence conforming DG methods for Stokes equations</h3>
+    
+    <h3>Markus Melenk: hp-FEM for singular perturbations: balanced
+norms and multiple scales</h3>
+    <p>
+      We consider the approximation of solutions of singularly
+      perturbed elliptic equations. Two classes are studied.  The
+      first class consists of elliptic-elliptic problems.  There, the
+      classical Galerkin approximation is optimal in the so-called
+      energy norm, which is, however, so weak that features within the
+      layer are not well resolved.  We show that robust exponential
+      convergence of a high order FEM on suitable meshes is achieved
+      also in a stronger, ``balanced'' norm. This latter norm is
+      balanced in the sense that layer contributions are of size
+      $O(1)$ uniformly in the perturbation parameter. The second class
+      consists of systems of singularly perturbed ODEs of
+      elliptic-hyperbolic type with multiple scales. We discuss
+      well-posedness of the variational formulations and robust
+      convergence of an $h$-version Discontinuous Galerkin method on
+      Shishkin meshes.
+    </p>
+
+    <h3>Peter Minev: High-order Artificial Compressibility for the Navier-Stokes Equations</h3>
+    <p>
+      We introduce a generalization of the artificial compressibility
+      method for approximation of the incompressible Navier-Stokes
+      equations. It allows for the construction of schemes of any
+      order in time that require the solution of a fixed number of
+      vectorial parabolic problems, depending only on the desired
+      order of the scheme. These problems have a condition number that
+      scales like <i>k h<sup>-2</sup></i>, with k
+      being the time step and h being the spatial grid size.  This
+      approach has several advantages in comparison to the traditional
+      pro- jection schemes widely used for the unsteady Navier-Stokes
+      equations. First, it allows for the construction of schemes of
+      any order for both, the veloc- ity and pressure, while the best
+      proven accuracy achievable by a projection scheme is second
+      order on the velocity and 3/2 order on the pressure. Second, the
+      projection schemes require the solution of an elliptic scalar
+      problem for the pressure that has a condition number
+      of order <i>h<sup>-2</sup></i> in addition to a vectorial parabolic
+      problem for the velocity. This makes them slower if iterative
+      meth- ods are used to solve the linear systems. Third, the
+      artificial compressibility schemes of second or higher order
+      based on a defect correction approach pre- sented below have
+      superior stability properties as compared to a second order
+      projection scheme. Finally, we will discuss the approach for
+      solving the linear system resulting from the momentum equation
+      and more particularly, we will present an unconditionally stable
+      scheme that treats the mixed derivatives in the grad div
+      operator fully explicitly.
+    </p>
+    
+    <h3>Peter Monk: Generalized Plane Waves and Trefftz Discontinuous Galerkin Methods</h3>
+    <p>
+      Following both theoretical analysis and extensive numerical
+      testing, Trefftz Discontinuous Galerkin (TDG) methods have shown
+      promise for efficiently solving time harmonic wave equations
+      including the Helmholtz equation, Maxwell?s equations and Liner
+      Elasticity.  However, one drawback is that coefficients
+      describing the physical medium (for example, refractive index)
+      need to be piecewise constant.  In some applications spatially
+      dependent coefficients are encountered.  In this talk I shall
+      describe a technique for generating approximate local solutions
+      of the Helmholtz equation with non-constant coefficients called
+      Generalized Plane Waves. To use these functions with TDG
+      requires a generalization of the standard TDG scheme.  An error
+      analysis will be described and numerical examples will be
+      presented.
+    </p>
+
+    <h3>Nilima Nigam: Localized activation and intramuscular fat in muscle: an investigating using DG methods</h3>
+    <p>
+      The response of the muscle-tissue unit (MTU) to activation and
+      applied forces is affected by the architectural details as well
+      as the material properties of this nearly-incompressible
+      tissue. We will describe the (highly nonlinear) elastic
+      equations governing this response for a fully three-dimensional,
+      quasi-static, fully nonlinear and anisotropic MTU. We describe a
+      three-field formulation for this problem, and present a DG
+      discretization strategy. The scheme was implemented using {\tt
+      deal.ii}. We present computational results about the effects of
+      localized activation as well as the effects of fatty tissue on
+      muscle response. This is joint with Sebastian Dominguez, Hadi
+      Rahemi, David Ryan and James Wakeling.
+    </p>
+
+    <h3>Ricardo Oyarzua: Augmented mixed-FEM for Navier-Stokes and related problems in Fluid Mechanics</h3>
+    <p>
+      In this talk we present a new mixed-type finite element method
+      for the Navier-Stokes problem. This new method is based on the
+      introduction of a modified pseudostress tensor depending
+      nonlinearly on the velocity through the respective convective
+      term. The pressure is eliminated by using the incompressibility
+      condition. Next, the equations are augmented with Galerkin type
+      terms arising from the constitutive and equilibrium equations,
+      and from the Dirichlet boundary condition. In this way, we
+      propose an augmented mixed method for the fluid flow problem
+      where the only unknowns are given by the aforementioned modified
+      pseudostress and the velocity. Further variables of interest,
+      such as the fluid pressure, the fluid vorticity and the fluid
+      velocity gradient, can be easily approximated as a simple
+      postprocess of the finite element solutions with the same rate
+      of convergence. Then, the classical Banach’s fixed point Theorem
+      and Lax-Milgram’s Lemma are applied to prove well-posedness of
+      the continuous problem. Similarly, we establish well-posedness
+      and the corresponding Cea’s estimate of the associated Galerkin
+      scheme considering any conforming finite element subspace for
+      each unknown. In particular, the associated Galerkin scheme can
+      be defined by employing Raviart-Thomas elements of degree k for
+      the nonlinear-pseudostress tensor, and continuous piecewise
+      polynomial elements of degree k + 1 for the velocity, which
+      leads to an optimal convergent scheme. Finally, we extend our
+      analysis to the Navier-Stokes problem with variable viscosity
+      and the Boussinesq equations.
+    </p>
+
+    <h3>Ilaria Perugia: Space-time Trefftz discontinuous Galerkin methods for wave problems</h3>
+    <p>
+      A space-time discontinuous Galerkin method for wave propagation
+      problems will be presented and analysed. The special feature of
+      the scheme is that it is a Trefftz method, namely that trial and
+      test functions are solution of the partial differential equation
+      to be discretised in each element of the (space-time) mesh.
+    </p>
+    <p>
+      For acoustic and electromagnetic wave equations in one space
+      dimension, we prove stability of the method, quasi-optimality,
+      best approximation estimates for polynomial Trefftz spaces, and
+      high order error bounds in the meshwidth and in the polynomial
+      degree.  The analysis framework also applies to the case of
+      higher space dimensions. Some numerical experiments demonstrate
+      the theoretical results and the faster convergence compared to
+      the non-Trefftz version of the scheme.
+    </p>
+    <p>
+      These results have been obtained in collaboration with Fritz
+      Kretzschmar (TU Darmstadt), Andrea Moiola (University of
+      Reading), and Sascha M. Schnepp (ETH Zurich).
+    </p>
+    
+    <h3>Francisco-Javier Sayas: Hybridizable Discontinuous Galerkin Methods for Elastodynamics</h3>
+    <p>
+      In this talk I will present some preliminary results on the use
+      of an HDG method for the simulation of elastic waves. I will
+      show how the Qiu and Shi choice of spaces and stabilization
+      parameters for an HDG scheme applied to quasi-static elasticity
+      also apply for time harmonic elastic waves, providing a
+      superconvergent method. I will next discuss a conservation of
+      energy property that holds in the transient case when the
+      elasticity equations are semidiscretized in space with the same
+      HDG strategy.
+    </p>
+    <p>
+      This work is a collaboration with Allan Hungria (University of
+      Delaware) and Daniele Prada (Indiana University Purdue
+      University at Indianapolis)
+    </p>
+
+    <h3>Rolf Stenberg: On the error analysis of the stabilized finite element methods for the Stokes problem</h3>
+    <p>
+      We consider stabilized mixed finite element methods for the
+      Stokes problem. Previous error analysis of these methods have
+      assumed that the solution is smooth. Using a technique of
+      T. Gudi we now derive a quasioptimal error estimate, i.e. we
+      show that the error is bounded by the interpolation error and an
+      data oscillation term. In addition, we derive an residual based
+      a posteriori error.
+    </p>
+    <h3>Thomas Wihler: Discontinuous Galerkin Time Stepping Methods for Nonlinear Initial Value Problems with Finite Time Blow-Up</h3>
+    <p>
+      We consider continuous and discontinuous Galerkin time stepping
+      methods of arbitrary order as applied to nonlinear initial value
+      problems in real Hilbert spaces. We develop new techniques to
+      prove general Peano-type existence results for discrete
+      solutions. In particular, our results show that the existence of
+      solutions is independent of the local approximation order, and
+      only requires the local time steps to be sufficiently small
+      (independent of the polynomial degree). The uniqueness of
+      (local) solutions is addressed as well. In addition, our theory
+      is applied to finite time blow-up problems with nonlinearities
+      of algebraic growth. For such problems we develop an adaptive
+      time step algorithm for the purpose of numerically computing the
+      blow-up time, and provide a convergence result.
+    </p>
+
+  </div>
+  
+</body>
+</html>
